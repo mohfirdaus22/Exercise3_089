@@ -108,6 +108,12 @@ namespace Exercise3_089Exercise_Linked_List_A
                                 }
 
                             }
+                            break;
+                        case '3':
+                            {
+                                obj.firstNode();
+                            }
+                            break;
 
                     }
 
