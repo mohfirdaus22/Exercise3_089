@@ -26,7 +26,7 @@ namespace Exercise3_089Exercise_Linked_List_A
         public void addNote()
         {
             int rollNum;
-            string nm
+            string nm;
             Console.Write("\nEnter the roll number of the student : ");
             rollNum = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the name of the student : ");
@@ -45,6 +45,20 @@ namespace Exercise3_089Exercise_Linked_List_A
                 newnode.next = LAST;
                 LAST = newnode;
                 return;
+            }
+            Node Previous, current;
+            Previous = LAST;
+            current = LAST;
+
+            while ((current != null) && (rollNum >= current.rollNumber))
+            {
+                if (rollNum == current.rollNumber)
+                {
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
+                    return;
+                }
+                Previous = current;
+                current = current.next;
             }
         }
 
@@ -109,6 +123,11 @@ namespace Exercise3_089Exercise_Linked_List_A
                     char ch = Convert.ToChar(Console.ReadKey());    
                     switch (ch)
                     {
+                        case '0':
+                            {
+                                obj.addNote();
+                            }
+                            break;
                         case '1':
                             {
                                 obj.traverse();
