@@ -78,9 +78,16 @@ namespace Exercise3_089Exercise_Linked_List_A
                     Console.WriteLine("\n2. Search for a record in the list");
                     Console.WriteLine("\n3. Display the first record in the list");
                     Console.WriteLine("\n4. Exit");
-
-
-
+                    Console.Write("\nEnter your choice ( 1-4 ): ");
+                    char ch = Convert.ToChar(Console.ReadKey());    
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.traverse();
+                            }
+                            break;
+                    }
 
                 }
             }
