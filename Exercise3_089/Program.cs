@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise3_089
+namespace Exercise3_089Exercise_Linked_List_A
 {
-    internal class Program
+    class Node
     {
-        static void Main(string[] args)
-        {
-        }
+       
     }
 }
