@@ -87,6 +87,14 @@ namespace Exercise3_089Exercise_Linked_List_A
                                 obj.traverse();
                             }
                             break;
+                        case '2':
+                            {
+                                if (obj.listEmpty()==true)
+                                {
+                                    Console.WriteLine("\nList is Empty");
+                                    break
+                                }
+                            }
                     }
 
                 }
