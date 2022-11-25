@@ -10,7 +10,7 @@ namespace Exercise3_089Exercise_Linked_List_A
     {
       //creates Nodes for the circular nexted list
       public int rollNumber;
-      public string name
+      public string name;
       public Node next;
     }
     class CircularList
@@ -21,7 +21,22 @@ namespace Exercise3_089Exercise_Linked_List_A
         {
            LAST = null;
         }
-        public bool Search(int rollNo, ref Node previous, ref Node current)
+
+        public void addNote()
+        {
+            int rollNum;
+            int nm;
+            Console.Write("\nEnter the roll number of the student : ");
+            rollNum = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the name of the student : ");
+            nm = Console.ReadLine();
+            Node newnode = new Node();
+            newnode.rollNumber = rollNum;
+            newnode.name = nm;
+
+        }
+
+        public bool Search(int rollNo, ref Node previous, ref Node current 
         //Searches for the specified node
         {
             for(previous = current = LAST.next; current != LAST; previous = current, current = current.next)
