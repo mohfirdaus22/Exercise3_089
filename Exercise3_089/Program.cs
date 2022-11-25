@@ -26,10 +26,13 @@ namespace Exercise3_089Exercise_Linked_List_A
         {
             for(previous = current = LAST.next; current != LAST; previous = current, current = current.next)
             {
-                if (rollNo == previous.rollNumber)
+                if (rollNo == current.rollNumber)
                     return (true);//return true if the node is found
-
             }
+            if (rollNo == LAST.rollNumber)//if the node is present at the end
+                return true;
+            else 
+                return (false);//returns false if the node is not found
         }
     }
 
