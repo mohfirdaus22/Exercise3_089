@@ -66,6 +66,11 @@ namespace Exercise3_089Exercise_Linked_List_A
             else
                 Console.WriteLine("The first records in the list is:\n\n" + LAST.next.rollNumber + " " + LAST.next.name);
         }
+        static void Main(string[] args )
+        {
+            CircularList obj = new CircularList();  
+            
+        }
     }
 
 }
