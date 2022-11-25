@@ -34,6 +34,13 @@ namespace Exercise3_089Exercise_Linked_List_A
             else 
                 return (false);//returns false if the node is not found
         }
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
     }
 
 }
