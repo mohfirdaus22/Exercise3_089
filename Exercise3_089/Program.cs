@@ -69,7 +69,21 @@ namespace Exercise3_089Exercise_Linked_List_A
         static void Main(string[] args )
         {
             CircularList obj = new CircularList();  
-            
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMenu");
+                    Console.WriteLine("\n1. View all the records in the list");
+                    Console.WriteLine("\n2. Search for a record in the list");
+                    Console.WriteLine("\n3. Display the first record in the list");
+                    Console.WriteLine("\n4. Exit");
+
+
+
+
+                }
+            }
         }
     }
 
