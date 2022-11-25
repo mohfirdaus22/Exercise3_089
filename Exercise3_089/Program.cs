@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace Exercise3_089Exercise_Linked_List_A
         public void addNote()
         {
             int rollNum;
-            int nm;
+            string nm
             Console.Write("\nEnter the roll number of the student : ");
             rollNum = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the name of the student : ");
@@ -33,7 +34,18 @@ namespace Exercise3_089Exercise_Linked_List_A
             Node newnode = new Node();
             newnode.rollNumber = rollNum;
             newnode.name = nm;
-
+            
+            if (LAST == null || rollNum <=LAST.rollNumber)
+            {
+                if((LAST !=null) && (rollNum == LAST.rollNumber))
+                {
+                    Console.WriteLine("\nDuplicate roll numbers not allowed\n");
+                    return;
+                }
+                newnode.next = LAST;
+                LAST = newnode;
+                return;
+            }
         }
 
         public bool Search(int rollNo, ref Node previous, ref Node current 
